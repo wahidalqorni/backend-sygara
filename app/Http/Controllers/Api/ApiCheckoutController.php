@@ -17,6 +17,7 @@ class ApiCheckoutController extends Controller
     public function postCheckout(Request $request)
     {
         // ambil total harga yg ada di tabel keranjangs yg statusnya adalah 0 = keranjang, 1 = checkout 
+        // 
         $getTotalHarga = DB::table('keranjangs')
             ->select(DB::raw('SUM(totalharga) as totalharga '))
             ->where('status', '0')
