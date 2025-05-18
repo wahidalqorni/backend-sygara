@@ -45,8 +45,12 @@ Route::post('/keranjang-delete', [App\Http\Controllers\Api\ApiKeranjangControlle
 Route::post('/checkout-post', [App\Http\Controllers\Api\ApiCheckoutController::class, 'postCheckout']);
 Route::post('/checkout-post-by-id', [App\Http\Controllers\Api\ApiCheckoutController::class, 'postCheckoutById']);
 Route::post('/upload-bukti-bayar', [App\Http\Controllers\Api\ApiCheckoutController::class, 'uploadBuktiBayar']);
+// challange
 Route::get('/checkout-list-all', [App\Http\Controllers\Api\ApiCheckoutController::class, 'getCheckoutAll']);
+
 Route::get('/checkout-list-baru', [App\Http\Controllers\Api\ApiCheckoutController::class, 'getCheckoutBaru']);
+
+// challange
 Route::get('/checkout-list-proses', [App\Http\Controllers\Api\ApiCheckoutController::class, 'getCheckoutProses']);
 Route::get('/checkout-list-selesai', [App\Http\Controllers\Api\ApiCheckoutController::class, 'getCheckoutSelesai']);
 Route::get('/checkout-detail', [App\Http\Controllers\Api\ApiCheckoutController::class, 'getCheckoutDetail']);
