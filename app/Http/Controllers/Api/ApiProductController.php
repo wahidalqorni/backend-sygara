@@ -88,6 +88,46 @@ class ApiProductController extends Controller
         );
     }
 
+    public function getBuahProduct()
+    {
+        $data = Product::with(['merk'])
+            ->where('status', '1')
+            ->whereRelation('merk','merk_product', 'Buah-Buahan')
+            ->orderBy('nama_product', 'ASC')
+            ->get();
+        
+        // tampilkan responsenya
+        // menggunakan format json
+        return response()->json(
+            [
+                'success' => true,
+                'message' => 'Data berhasil diload',
+                'data' => $data,
+            ],
+            200
+        );
+    }
+
+    public function getSayurProduct()
+    {
+        $data = Product::with(['merk'])
+            ->where('status', '1')
+            ->whereRelation('merk','merk_product', 'Sayuran')
+            ->orderBy('nama_product', 'ASC')
+            ->get();
+
+        // tampilkan responsenya
+        // menggunakan format json
+        return response()->json(
+            [
+                'success' => true,
+                'message' => 'Data berhasil diload',
+                'data' => $data,
+            ],
+            200
+        );
+    }
+
     public function getNewProduct()
     {
         $data = Product::with(['merk'])

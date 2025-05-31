@@ -22,6 +22,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // PRODUCT
 Route::get('/product-rekomendasi', [App\Http\Controllers\Api\ApiProductController::class, 'getRekomendasi']);
+Route::get('/product-buah', [App\Http\Controllers\Api\ApiProductController::class, 'getBuahProduct']);
+Route::get('/product-sayur', [App\Http\Controllers\Api\ApiProductController::class, 'getSayurProduct']);
 // product-list
 Route::get('/product-list', [App\Http\Controllers\Api\ApiProductController::class, 'getAllProduct']);
 // product-new
