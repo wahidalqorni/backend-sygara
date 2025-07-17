@@ -36,6 +36,7 @@ class ApiKeranjangController extends Controller
                       ->where('status','0')
                       ->where('user_id',request('user_id'))
                       ->first();
+                      
                 
         return response()->json([
             'success' => true,

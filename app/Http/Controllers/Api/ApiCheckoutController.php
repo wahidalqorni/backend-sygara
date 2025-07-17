@@ -128,7 +128,7 @@ class ApiCheckoutController extends Controller
             die;
         }
 
-        $ongkir = 25000;
+        $ongkir = 10000;
 
         // Db transaction => akan mengupdate data apabila proses 1 berhasil dilakukan
         // jika proses pertama/kedua saat di proses ketiga gagal, maka proses 1 dan 2 dibatalkan
